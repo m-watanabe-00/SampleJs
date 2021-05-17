@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="viewport" content="width=device-width,initial-scale=1">
+<title>Javascript</title>
+</head>
+
+<body>
+
+<header>
+</header>
+
+<main>
+<section>
+	<h1>2021/4/15 Javascript実習</h1>
+</section>
+</main>
+
+<footer>
+</footer>
+<script>
+
+let myAge = 30;
+let age = 35;
+if(myAge===friendAge){
+  console.log('同い年です');
+}else if(myAge > friendAge){
+  console.log('年上です');
+}else{
+  console.log('年下です');
+}
+
+let lotto = Math.floor(Math.random() * 100)
+if(lotto > 70 && lotto <= 99){
+  console.log('大吉です');
+}else if(lotto > 50 && lotto <= 70){
+	console.log('中吉です');
+}else if(lotto > 20  && lotto <= 50){
+	console.log('小吉です');
+}else if(lotto <= 20){
+	console.log('凶です');
+}else {
+	console.log('大殺界です');
+}
+
+for(var i = 0; i < 10; i++){
+	  console.log(i + '回目');
+}
+
+
+
+</script>
+</body>
+</html>

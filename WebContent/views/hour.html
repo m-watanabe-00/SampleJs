@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="viewport" content="width=device-width,initial-scale=1">
+<title>sample</title>
+</head>
+
+<body>
+
+<header>
+<div class=container>
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div>
+</header>
+
+<main>
+<section>
+</section>
+</main>
+
+<footer>
+</footer>
+
+<script>
+'use strict';
+
+const hour = new Date().getHours();
+
+if(hour >= 19 && hour < 21){
+	window.alert('お弁当30%OFF!');
+}else if(hour === 9 || hour === 15){
+	window.alert('お弁当1個買ったから1個おまけ！');
+}else{
+	window.alert('お弁当はいかがですか？');
+}
+</script>
+
+</body>
+</html>

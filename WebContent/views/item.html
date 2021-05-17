@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Kitazawa">
+<meta name="description" content="説明文です">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>つけ麺　えんじ</title>
+<link rel="stylesheet" media="all" href="style.css" >
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+</head>
+<body>
+<header>
+<h1>つけ麺　えんじ</h1>
+</header>
+<div>
+<nav>
+<ul>
+<li><a href="index.html" class="hover-ul" style="text-decoration:none;"><span>トップメニュー</span></a></li>
+<li><a href="item.html" class="hover-ul" style="text-decoration:none;"><span>おしながき</span></a></li>
+<li><a href="map.html" class="hover-ul" style="text-decoration:none;"><span>マップ</span></a></li>
+</ul>
+</nav>
+
+<main>
+<section>
+<h2>おしながき</h2>
+
+<form action="#" id="form">
+    <!-- idを追加 -->
+	<input type="text" name="word" id="sumTotal">
+	<input type="submit" value="合計金額">
+<table>
+  	<tr>
+		<th><img src="image/men1.jpg" alt="つけ麺"></th>
+			<td class="price">1,200円</td>
+			<td>定番のこってりつけ麺</td>
+			    <!-- ボタンが押されたらoptionのvalueの数字が渡されます -->
+				<select name="quantityTuke" id="quantityTuke">
+ 					<option value="0">こってりつけ麺</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+	</tr>
+	<tr>
+		<th><img src="image/men2.jpg" alt="ねぎたっぷりつけ麺"></th>
+			<td>ねぎたっぷりつけ麺</td>
+			<td class="price">1,100円</td>
+				<select name="quantityNegi" id="quantityNegi">
+					<option value="0">ねぎたっぷりつけ麺</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+	</tr>
+	<tr>
+		<th><img src="image/men3.jpg" alt="醤油ラーメン"></th>
+			<td class="price">1,100円</td>
+			<td>醤油ラーメン</td>
+				<select name="quantityRamen" id="quantityRamen">
+					<option value="0">醤油ラーメン</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+	</tr>
+</table>
+</form>
+</section>
+</main>
+</div>
+<footer>
+<p>Copyright 2021 Kitazawa</p>
+</footer>
+
+<script>
+
+'use strict';
+
+document.getElementById('form').onsubmit = function(event){
+	event.preventDefault();
+
+	let priceTuke = 1200;
+	let priceNegi = 1100;
+	let priceRamen = 1100;
+
+	<!-- 文字列をparseIntで数値に置き換えています -->
+	let quantityTuke = parseInt(document.getElementById('quantityTuke').value);
+	let quantityNegi = parseInt(document.getElementById('quantityNegi').value);
+	let quantityRamen = parseInt(document.getElementById('quantityRamen').value);
+
+	let totalIn = calc_total_price(priceTuke,quantityTuke,priceNegi,quantityNegi,priceRamen,quantityRamen);
+
+	function calc_total_price(priceTuke,quantityTuke,priceNegi,quantityNegi,priceRamen,quantityRamen){
+		let total = priceTuke*quantityTuke+priceNegi*quantityNegi+priceRamen*quantityRamen;
+	return total;
+	}
+
+	<!-- 最後に表示先のidを設定して関数で計算した合計金額を渡しています -->
+	document.getElementById("sumTotal").value = totalIn
+};
+
+</script>
+
+</body>
+</html>

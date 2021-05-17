@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="viewport" content="width=device-width,initial-scale=1">
+<title>sample</title>
+</head>
+
+<body>
+
+<header>
+
+</header>
+
+<main>
+<section>
+	<h1>2021/4/16 Javascript実習</h1>
+</section>
+</main>
+
+<footer>
+</footer>
+
+<script>
+'use strict';
+
+function calc_total_price(price,quantity){
+	const TAX_RATE = 1.5;
+	let total = price * quantity * TAX_RATE;
+	return total;
+}
+
+let book = {title:'白雪姫', author:'グリム兄弟', year:1810};
+
+console.log('商品の合計は' + calc_total_price(8000,5) + '円(税込)です。');
+console.log('商品の合計は' + calc_total_price(300,14) + '円(税込)です。');
+</script>
+
+</body>
+</html>

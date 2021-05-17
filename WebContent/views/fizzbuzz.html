@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="viewport" content="width=device-width,initial-scale=1">
+<title>sample</title>
+</head>
+
+<body>
+
+<header>
+<div class=container>
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div>
+</header>
+
+<main>
+<section>
+	<p id="output"></p>
+</section>
+</main>
+
+<footer>
+</footer>
+
+<script>
+'use strict';
+
+function fizzbuzz(num){
+	if(num % 3 === 0 && num % 5 === 0){
+		return 'fizzbuzz';
+	}else if(num % 3 === 0){
+		return 'fizz';
+	}else if(num % 5 === 0){
+		return 'buzz';
+	}else{
+		return num;
+	}
+}
+
+console.log(fizzbuzz(15));
+</script>
+
+</body>
+</html>

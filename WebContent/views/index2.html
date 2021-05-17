@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="viewport" content="width=device-width,initial-scale=1">
+<title>sample</title>
+</head>
+
+<body>
+
+<header>
+<div class=container>
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div>
+</header>
+
+<main>
+<section>
+</section>
+</main>
+
+<footer>
+</footer>
+
+<script>
+'use strict';
+
+const number = Math.floor(Math.random()*6);
+const answer = parseInt(window.prompt('数当てゲーム。0~5の数字を入力してね。'));
+let msg;
+if(answer === number){
+	msg = '当たり！';
+}else if(answer < number){
+	msg = '残念でした！もっと大きい。';
+}else if(answer > number){
+	msg = '残念でした！もっと小さい。';
+}else{
+	msg = '0~5の数字を入力してね。';
+}
+window.alert(msg);
+</script>
+
+</body>
+</html>

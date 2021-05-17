@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="viewport" content="width=device-width,initial-scale=1">
+<title>Javascript</title>
+</head>
+
+<body>
+
+<header>
+</header>
+
+<main>
+<section>
+	<h1>2021/4/16 Javascript実習</h1>
+	<form action="#" id="form">
+		 <input type="text" name="word">
+		 <input type="submit" value="検索">
+	</form>
+	<p id="output">検索前</p>
+</section>
+</main>
+
+<footer>
+</footer>
+<script>
+'use strict';
+
+document.getElementById('form').onsubmit = function(event){
+	event.preventDefault();
+	let inputText = document.getElementById('form').word.value;
+	document.getElementById('output').textContent = inputText + 'の検索中…';
+	console.log('クリックされました');
+};
+</script>
+</body>
+</html>
